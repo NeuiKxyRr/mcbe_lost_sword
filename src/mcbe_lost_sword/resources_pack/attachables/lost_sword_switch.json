@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "lost_mod:lost_sword_switch",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/items/lost_sword_switch_0",
+                "item1": "textures/items/lost_sword_switch_0",
+                "item2": "textures/items/lost_sword_switch_1"
+            },
+            "geometry": {
+                "default": "geometry.sword"
+            },
+            "animations": {
+                "wield": "animation.bow.wield",
+                "1stbase": "animation.player.1stbase",
+                "3rdbase": "animation.player.3rdbase"
+            },
+            "scripts": {
+                "animate": [
+                    "wield",
+                    {
+                        "1stbase": "c.is_first_person"
+                    },
+                    {
+                        "3rdbase": "!c.is_first_person"
+                    }
+                ]
+            },
+            "render_controllers": [
+                "controller.render.lost_sword_switch"
+            ]
+        }
+    }
+}

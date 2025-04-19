@@ -1,0 +1,18 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "lost_mod:agent_transfer",
+            "is_summonable": true
+        },
+        "components": {
+            "minecraft:transformation": {
+                "into": "minecraft:agent",
+                "keep_owner": true
+            },
+            "minecraft:health": {
+                "value": 0
+            }
+        }
+    }
+}

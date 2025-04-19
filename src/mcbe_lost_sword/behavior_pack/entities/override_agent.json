@@ -1,0 +1,33 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:agent"
+        },
+        "components": {
+            "minecraft:tick_world": {
+                "distance_to_players": true,
+                "never_despawn": true,
+                "radius": 5,
+                "ticking_area": 4
+            },
+            "minecraft:health": {
+                "min": 20
+            },
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 1
+            },
+            "minecraft:persistent": {},
+            "minecraft:physics": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": true
+                    }
+                ]
+            }
+        }
+    }
+}

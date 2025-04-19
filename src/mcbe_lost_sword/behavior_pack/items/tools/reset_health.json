@@ -1,0 +1,42 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "lost_mod:reset_health",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": {
+                "value": 1
+            },
+            "minecraft:allow_off_hand": true,            
+            "minecraft:should_despawn": false,
+            "minecraft:render_offsets": {
+                "main_hand": {
+                    "third_person": {
+                        "scale": [0.08, 0.11, 0.08]
+                    },
+                    "first_person": {
+                        "scale": [0.04, 0.038, 0.025]
+                    }
+                }
+            },            
+            "minecraft:use_modifiers": {
+                "use_duration": 100
+            },
+            "minecraft:food": {
+                "can_always_eat": true
+            },
+            "minecraft:display_name": {
+                "value": "§c生命值修复器§r"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "reset_health"
+                }
+            }
+        }
+    }
+}

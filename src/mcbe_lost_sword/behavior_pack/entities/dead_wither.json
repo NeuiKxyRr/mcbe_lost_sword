@@ -1,0 +1,62 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "lost_mod:dead_wither",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "50"
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "undead"
+                        }
+                    },
+                    "deals_damage": false
+                }
+            },
+            "minecraft:health": {
+                "value": 0,
+                "max": 0,
+                "min": 0
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 3
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:loot": {
+                "table": "loot_tables/entities/wither_boss.json"
+            },
+            "minecraft:nameable": {},
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:movement.basic": {
+                "max_turn": 0
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "wither",
+                    "skeleton",
+                    "monster",
+                    "undead",
+                    "mob"
+                ]
+            },
+            "minecraft:persistent": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            }
+        }
+    }
+}

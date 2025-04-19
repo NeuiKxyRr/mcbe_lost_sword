@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "lost_mod:lost_sword",
+                            "name": "lost_sword:lost_sword_category"
+                        },
+                        "items": [
+                            "lost_mod:lost_sword",
+                            "lost_mod:lost_sword_switch"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

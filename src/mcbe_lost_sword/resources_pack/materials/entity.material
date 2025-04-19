@@ -1,0 +1,27 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "lost_sword:entity_static": {
+            "msaaSupport": "Both",
+            "+defines": ["USE_UV_ANIM", "ALPHA_TEST"],
+            "+states": ["Blending", "DisableCulling"],
+            "blendSrc": "One",
+            "blendDst": "OneMinusSrcAlpha",
+            "+samplerStates": [
+                {
+                    "samplerIndex": 0,
+                    "textureWrap": "Repeat"
+                }
+            ]
+        },
+        "lost_sword_glint:lost_sword": {
+            "+defines": ["GLINT"],
+            "+samplerStates": [
+                {
+                    "samplerIndex": 1,
+                    "textureWrap": "Repeat"
+                }
+            ]
+        }
+    }
+}

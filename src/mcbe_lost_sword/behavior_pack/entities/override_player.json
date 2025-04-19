@@ -1,0 +1,294 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "ani_cancel_use",
+                    {
+                        "ex_remover": "query.property('lost_mod:remove_flag')"
+                    }
+                ]
+            },
+            "animations": {
+                "ani_cancel_use": "controller.animation.ani_cancel_use",
+                "ex_remover": "animation.ex_remover"
+            },
+            "properties": {
+                "lost_mod:remove_flag": {"type": "boolean", "default": false, "client_sync": true}
+            }            
+        },
+        "component_groups": {
+            "lock_health_state": {
+                "minecraft:health": {"min": 20, "value": 20},
+                "minecraft:variant": {"value": 1000024},
+                "minecraft:mark_variant": {"value": 1000024},
+                "minecraft:damage_sensor": [
+                    {"cause": "all", "deals_damage": false}
+                ],
+                "minecraft:spell_effects": {
+                    "remove_effects": ["bad_omen", "nausea", "slowness", "hunger", "levitation", "blindness", "instant_damage", "mining_fatigue", "poison", "weakness"]
+                },
+                "minecraft:player.saturation": {"min": 20},
+                "minecraft:knockback_resistance": {"value": 20},
+                "minecraft:collision_box": {"width": 0, "height": 0},
+                "minecraft:player.level": {"value": 24791, "max": 24791},
+                "minecraft:breathable": {"totalSupply": 143434, "suffocateTime": 643434, "inhaleTime": 64343, "generatesBubbles": true},
+                "minecraft:nameable": {"alwaysShow": true, "allowNameTagRenaming": false
+                },
+                "minecraft:insomnia": {"days_until_insomnia": 100},
+                "minecraft:on_death": {"event": "§kDEATH_EVENT_292§r", "target": "self"},
+                "minecraft:fire_immune": true,
+                "minecraft:inventory": {"inventory_size": 0, "container_type": "inventory"}
+            },
+            "death_state": {
+                "minecraft:health": {"value": 0, "max": 0, "min": 0},
+                "minecraft:player.saturation": {"value": 0},
+                "minecraft:player.level": {"value": 0, "max": 0},
+                "minecraft:player.experience": {"value": 0, "max": 0}
+            },
+            "kick_state": {
+                "minecraft:explode": {"fuseLength": 0, "power": 0, "fuseLit": true, "destroyAffectedByGriefing": true, "causesFire": false}
+            },
+            "minecraft:add_bad_omen": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "bad_omen",
+                            "duration": 6000,
+                            "display_on_screen_animation": true
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time": [
+                        0,
+                        0
+                    ],
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "minecraft:clear_add_bad_omen",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:clear_bad_omen_spell_effect": {
+                "minecraft:spell_effects": {}
+            },
+            "minecraft:raid_trigger": {
+                "minecraft:raid_trigger": {
+                    "triggered_event": {
+                        "event": "minecraft:remove_raid_trigger",
+                        "target": "self"
+                    }
+                },
+                "minecraft:spell_effects": {
+                    "remove_effects": "bad_omen"
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "player"
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:can_climb": {},
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "subject": "self",
+                                    "value": "bad_omen"
+                                },
+                                {
+                                    "test": "is_in_village",
+                                    "subject": "self",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        "event": "minecraft:trigger_raid"
+                    }
+                ]
+            },
+            "minecraft:player.saturation": {
+                "value": 20
+            },
+            "minecraft:player.exhaustion": {
+                "value": 0,
+                "max": 4
+            },
+            "minecraft:player.level": {
+                "value": 0,
+                "max": 24791
+            },
+            "minecraft:player.experience": {
+                "value": 0,
+                "max": 1
+            },
+            "minecraft:variant": {"value": 0},
+            "minecraft:mark_variant": {"value": 0},
+            "minecraft:skin_id": {"value": 64448},
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": -1,
+                "inhaleTime": 3.75,
+                "generatesBubbles": false
+            },
+            "minecraft:nameable": {
+                "alwaysShow": true,
+                "allowNameTagRenaming": false
+            },
+            "minecraft:insomnia": {
+                "days_until_insomnia": 3
+            },
+            "minecraft:physics": {},
+            "minecraft:rideable": {
+                "seat_count": 2,
+                "family_types": [
+                    "parrot_tame"
+                ],
+                "pull_in_entities": true,
+                "seats": [
+                    {
+                        "position": [
+                            0.4,
+                            -0.15,
+                            0.04
+                        ],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0,
+                        "lock_rider_rotation": 0
+                    },
+                    {
+                        "position": [
+                            -0.4,
+                            -0.15,
+                            0.04
+                        ],
+                        "min_rider_count": 1,
+                        "max_rider_count": 2,
+                        "lock_rider_rotation": 0
+                    }
+                ]
+            },
+            "minecraft:scaffolding_climber": {},
+            "minecraft:is_hidden_when_invisible": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {},
+            "minecraft:gain_bad_omen": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:add_bad_omen"
+                    ]
+                }
+            },
+            "minecraft:clear_add_bad_omen": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:add_bad_omen"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "minecraft:clear_bad_omen_spell_effect"
+                    ]
+                }
+            },
+            "minecraft:trigger_raid": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:raid_trigger"
+                    ]
+                }
+            },
+            "minecraft:remove_raid_trigger": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:raid_trigger"
+                    ]
+                }
+            },
+            "lost_lock_health_event": {
+                "add": {
+                    "component_groups": ["lock_health_state"]
+                },
+                "run_command": {
+                    "command": [
+                        "gamerule showdeathmessages false",
+                        "gamerule functioncommandlimit 0",
+                        "gamerule sendcommandfeedback false",
+                        "gamerule commandblockoutput false",
+                        "gamerule commandblocksenabled false",
+                        "spawnpoint @s[r=1000] ~ ~ ~",
+                        "gamerule keepinventory true",
+                        "gamerule maxcommandchainlength 0",
+                        "scoreboard players reset *",
+                        "tickingarea remove_all",
+                        "effect @s instant_health 6466643 255 true",
+                        "effect @s wither 6466643 255 true"
+                    ],
+                    "target": "self"
+                }
+            },
+            "lost_die_event": {
+                "add": {
+                    "component_groups": ["death_state"]
+                },
+                "run_command": {
+                    "command": [
+                        "spawnpoint @s 185454 433131 646461",
+                        "gamerule showdeathmessages true",
+                        "gamerule maxcommandchainlength 0",
+                        "scoreboard players reset *",
+                        "tickingarea remove_all",
+                        "tp @s 133464 646334 664644",
+                        "clear @s",
+                        "effect @s clear",
+                        "kill @s",
+                        "damage @s 646464664 suicide"
+                    ],
+                    "target": "self"
+                }
+            },
+            "lost_kick_event": {
+                "add": {
+                    "component_groups": ["kick_state"]
+                }
+            }
+        }
+    }
+}

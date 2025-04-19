@@ -1,0 +1,86 @@
+disconnect.scriptWatchdog= 
+disconnectionScreen.unexpectedPacket=loacl dataPacket has been destroyed by §blo§cst §fsword§r
+accessibility.chat.howtoopen= 
+lost_sword_category=§bLo§cst §fSword§r
+
+
+
+enchantment.durability=§o§7A lost sword§r
+enchantment.level.3= 
+
+item.lost_mod:lost_sword_seal=§bLo§cst §fSword[§l§gseal§f]§r
+item.lost_mod:reset_health=§cHP Healer§r
+item.lost_mod:lost_sword_switch=§bLo§cst §fSword Mode Converter§r
+item.lost_mod:lost_sword=§bLo§cst §fSword§r
+item.lost_mod:gui_shield=§I§eUI§r §eMask§r
+item.lost_mod:shadow_whisper=§0The whispers of the dead§r
+item.lost_mod:death_item=§blo§cst §fdeath§r
+item.lost_mod:gui_death_item=§blo§cst §fGUI death§r
+
+death.attack.generic= 
+death.attack.anvil= 
+death.attack.arrow= 
+death.attack.bullet= 
+death.attack.cactus= 	
+death.attack.cactus.player= 
+death.attack.drown= 
+death.attack.drown.player= 	
+death.attack.explosion= 
+death.attack.explosion.player= 
+death.attack.fall= 
+death.attack.fallingBlock= 
+death.attack.fireball= 
+death.attack.fireball.item= 
+death.attack.fireworks= 
+death.attack.flyIntoWall= 
+death.attack.generic= 
+death.attack.indirectMagic= 	
+death.attack.indirectMagic.item= 	
+death.attack.inFire= 
+death.attack.inFire.player= 
+death.attack.inWall= 
+death.attack.lava= 
+death.attack.lava.player= 
+death.attack.lightningBolt= 
+death.attack.magic= 
+death.attack.magma= 
+death.attack.magma.player= 
+death.attack.mob= 
+death.attack.onFire= 	
+death.attack.onFire.player= 
+death.attack.outOfWorld= 
+death.attack.player= 
+death.attack.player.item= 	
+death.attack.spit= 
+death.attack.starve= 
+death.attack.thorns= 
+death.attack.thrown= 	
+death.attack.trident= 
+death.attack.wither= 
+death.attack.freeze= 
+death.attack.stalactite= 	
+death.attack.stalagmite= 
+death.fell.accident.generic= 	
+death.fell.accident.ladder= 	
+death.fell.accident.vines= 	
+death.fell.accident.water= 
+death.fell.assist= 
+death.fell.assist.item= 
+death.fell.finish= 
+death.fell.killer= 
+
+entity.lost_mod:dead_wither.name=wither
+entity.player.name=player
+entity.agent.name=agent
+entity.falling_block.name=alive entity
+
+tile.lost_mod:gt_block.name= 
+
+mes.lost.mes=%s：§o§cWarning§r: Data driven event defense failure(version exception | script exception | event targeting)
+mes.lost.mes2=%s：§o§2Attempting to suppress setCurrent....§r
+mes.lost.mes3=%s：Family has changed
+mes.lost_death.mes=%s has been §blo§cst §fsword§r killed
+mes.lost_death.mes2=%s has been into §blo§cst §fsword§r cheat to empty
+mes.lost_death.mes3=%s has been world forget
+mes.lost_death.mes4=%s has been §blo§cst §fsword§r remove
+mes.reload=has been reloaded script

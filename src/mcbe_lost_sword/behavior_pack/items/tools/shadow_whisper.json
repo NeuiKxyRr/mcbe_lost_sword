@@ -1,0 +1,32 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "lost_mod:shadow_whisper",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": {
+                "value": 1
+            },
+            "minecraft:allow_off_hand": true,            
+            "minecraft:should_despawn": false,
+            "minecraft:use_modifiers": {
+                "use_duration": 100
+            },
+            "minecraft:food": {
+                "can_always_eat": true
+            },
+            "minecraft:display_name": {
+                "value": "§0亡灵的低语§r"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "shadow_whisper"
+                }
+            }
+        }
+    }
+}

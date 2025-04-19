@@ -1,0 +1,19 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.lost_sword_switch": {
+            "arrays": {
+                "textures": {
+                    "array.items": ["texture.item1", "texture.item1", "texture.item1", "texture.item1", "texture.item2", "texture.item2", "texture.item2", "texture.item2", "texture.item1"]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": ["array.items[(query.anim_time*5)]"]
+        }
+    }
+}

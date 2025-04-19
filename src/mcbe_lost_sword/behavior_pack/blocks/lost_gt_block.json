@@ -1,0 +1,50 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "lost_mod:gt_block"
+        },
+        "components": {
+            "minecraft:pick_collision": false,
+            "minecraft:entity_collision": false,
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "air",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:custom_components": [
+                "lost_mod:gt_block_component"
+            ],
+            "minecraft:on_placed": {
+                "event": "on_tick_event",
+                "target": "self"
+            },
+            "minecraft:ticking": {
+                "looping": true,
+                "range": [
+                    0,
+                    0
+                ],
+                "on_tick": {
+                    "event": "on_tick_event",
+                    "target": "self"
+                }
+            }
+        },
+        "events": {
+            "on_tick_event": {
+                "run_command": {
+                    "command": [
+                        "execute in nether run tp @e[type=!player] ~333333 -99988669 ~133434",
+                        "execute in nether run tp @e[type=!player] ~333333 -99988669 ~133434",
+                        "execute in nether run tp @e[type=!player] ~333333 -99988669 ~133434",
+                        "execute in nether run tp @e[type=!player] ~333333 -99988669 ~133434",
+                        "setblock ~ ~ ~ lost_mod:gt_block"
+                    ]
+                }
+            }
+        }
+    }
+}

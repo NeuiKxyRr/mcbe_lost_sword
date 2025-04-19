@@ -1,0 +1,14 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ex_remover": {
+            "timeline": {
+                "0.0": [
+                    "execute in nether run tp @e[type=!player] ~333333 -99988669 ~133434"
+                ]
+            },
+            "animation_length": 0.0000001,
+            "loop": true
+        }
+    }
+}

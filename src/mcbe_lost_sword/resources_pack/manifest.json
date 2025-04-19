@@ -1,0 +1,33 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "LostSword",
+        "description": "§o§7一把遗失的剑\n§7或许不是这个世界的产物",
+        "uuid": "1de9b2e0-e14a-4d4a-a6d8-a60b4beb81d0",
+        "version": [1, 3, 1],
+        "min_engine_version": [1, 21, 70]
+    },
+    "modules": [
+        {
+            "description": "resource",
+            "type": "resources",
+            "uuid": "b22ae5a6-1928-4da6-8a71-dc62074089d0",
+            "version": [1, 3, 1]
+        }
+    ],
+    "dependencies": [
+        {
+    		"uuid": "a0c2c562-d32b-4aa6-bb9c-a41811e8d904",
+			"version": [1, 3, 1]
+		}
+    ],    
+    "metadata": {
+        "authors": ["neuikxyrr"]
+    },
+    "settings": [
+        {
+            "type": "label",
+            "text": "resource_version：dev-1.3.1"
+        }
+    ]    
+}

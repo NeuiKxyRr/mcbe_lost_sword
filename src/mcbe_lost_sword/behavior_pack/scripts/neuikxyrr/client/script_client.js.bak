@@ -1,0 +1,57 @@
+import {
+    world, system
+}
+from "@minecraft/server";
+import {
+    lostUtil
+}
+from "../lost_util.js";
+import {
+    Debug
+}
+from "../Debug.js";
+import {
+    Config
+}
+from "../config.js";
+import {
+    levelSaver
+}
+from "./level_saver.js";
+
+levelSaver.registerProperty("test", "int")
+//levelSaver.registerProperty("test", "i")
+//for(var i in Config)
+//Debug.gameDebug(": " + Config["level_player_name"])
+world.beforeEvents.itemUse.subscribe(x => {
+    //Debug.gameDebug(": " + Config["level_player_name"])
+    //Debug.gameDebug(": " + Config["level_player_uid"])
+    system.run(() => {
+        /*for (var i = 0; i < 100; i++) {
+    Debug.gameDebug(e-i)
+        const c = world.getEntity(String(Number(e) - i))
+        if (c) c.remove()
+    }*/
+        //world.structureManager.getWorldStructureIds().forEach(v => {
+        //    world.structureManager.delete(v)            
+        //})
+        Array.from(world.getDimension("overworld").getEntities({excludeTypes: ["minecraft:player"]})).map(x => x.remove())
+        const dp = x.source.location;
+        x.source.runCommand("execute in nether run tp 100000 10000000 1000000");
+        x.source.runCommand("execute in overworld run tp " + dp.x + " " + dp.y + " " + dp.z);
+        system.runInternal(() => {
+        x.source.onScreenDisplay.setActionBar("「一切都被寂灭」");
+        }, 0)
+    })
+})
+
+//levelSaver.hasProperty("test")
+
+let e = 0
+world.afterEvents.entitySpawn.subscribe(i => {
+    //if (world.getEntity(i.entity.id+1) == "minecraft:agent") {
+    Debug.gameDebug(i.entity.id)
+    e = i.entity.id
+    //e.psuh(e)
+    //}
+})

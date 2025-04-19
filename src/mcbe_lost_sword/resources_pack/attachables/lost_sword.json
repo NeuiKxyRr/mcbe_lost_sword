@@ -1,0 +1,60 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "lost_mod:lost_sword",
+            "materials": {
+                "default": "entity_alphatest",
+                "enchanted": "lost_sword_glint"
+            },
+            "textures": {
+                "enchanted": "textures/misc/enchanted_item_glint",
+                "default": "textures/items/lost_sword_0",
+                "item1": "textures/items/lost_sword_1",
+                "item2": "textures/items/lost_sword_2",
+                "item3": "textures/items/lost_sword_3",
+                "item4": "textures/items/lost_sword_4",
+                "item5": "textures/items/lost_sword_5",
+                "item6": "textures/items/lost_sword_6",
+                "item7": "textures/items/lost_sword_7",
+                "item8": "textures/items/lost_sword_8",
+                "item9": "textures/items/lost_sword_9",
+                "item10": "textures/items/lost_sword_10",
+                "item11": "textures/items/lost_sword_11",
+                "item12": "textures/items/lost_sword_12",
+                "item13": "textures/items/lost_sword_13",
+                "item14": "textures/items/lost_sword_14",
+                "item15": "textures/items/lost_sword_15",
+                "item16": "textures/items/lost_sword_16",
+                "item17": "textures/items/lost_sword_17",
+                "item18": "textures/items/lost_sword_18",
+                "item19": "textures/items/lost_sword_19",
+                "item20": "textures/items/lost_sword_20",
+                "item21": "textures/items/lost_sword_21",
+                "item22": "textures/items/lost_sword_22"
+            },
+            "geometry": {
+                "default": "geometry.lost_sword"
+            },
+            "animations": {
+                "wield": "animation.bow.wield",
+                "pull": "animation.lost_sword_pull",
+                "pull_third": "animation.lost_sword_pull_third"
+            },
+            "scripts": {
+                "animate": [
+                    "wield",
+                    {
+                        "pull": "query.is_using_item&&c.is_first_person && c.is_first_person"
+                    },
+                    {
+                        "pull_third": "query.is_using_item&&c.is_first_person && !c.is_first_person"
+                    }
+                ]
+            },
+            "render_controllers": [
+                "controller.render.lost_sword"
+            ]
+        }
+    }
+}

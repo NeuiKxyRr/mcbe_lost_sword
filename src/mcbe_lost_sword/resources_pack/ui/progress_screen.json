@@ -1,0 +1,28 @@
+{
+    "namespace": "progress",
+    "overworld_loading_progress_screen": {
+        "force_render_below": false,
+        "is_showing_menu": false,
+        "absorbs_input": false,
+        "should_steal_mouse": true,
+        "$screen_content": "common.base_screen_empty_panel",
+        "$screen_bg_content": "common.base_screen_empty_panel"
+    },
+    "nether_loading_progress_screen": {
+        "force_render_below": false,
+        "is_showing_menu": false,
+        "absorbs_input": false,
+        "should_steal_mouse": true,
+        "$screen_content": "common.base_screen_empty_panel",
+        "$screen_bg_content": "common.base_screen_empty_panel"
+    },
+    "theend_loading_progress_screen": {
+        "force_render_below": false,
+        "is_showing_menu": false,
+        "absorbs_input": false,
+        "should_steal_mouse": true,
+        "$screen_content": "common.base_screen_empty_panel",
+        "$screen_bg_content": "common.base_screen_empty_panel"
+    },
+    "world_loading_progress_screen": {}
+}

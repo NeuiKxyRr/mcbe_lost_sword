@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.lost_sword.wield": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "position": ["c.is_first_person ? -4.0 : 0.0", "c.is_first_person ? -2.0 : 0.0", "c.is_first_person ? -2.0 : 0.0"],
+                    "rotation": ["c.is_first_person ? -15.0 : 0.0", "c.is_first_person ? 55.0 : 0.0", "c.is_first_person ? -35.0 : 0.0"]
+                }
+            }
+        },
+        "animation.lost_sword_pull": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "position": ["-1.5 - variable.none", "-1.5 + variable.none", -4.8],
+                    "rotation": [-53.0, 8.0, 35.0]
+                }
+            }
+        },
+        "animation.lost_sword_pull_third": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "rotation": [190, 0, 180],
+                    "position": [0, 0, -10]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "resource_pack_name": "items",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "lost_sword_seal": {
+            "textures": "textures/items/lost_sword_seal"
+        },
+        "lost_sword": {
+            "textures": "textures/items/lost_sword_14"
+        },
+        "lost_sword_switch": {
+            "textures": "textures/items/lost_sword_switch_1"
+        },
+        "reset_health": {
+            "textures": "textures/items/reset_health"
+        },
+        "gui_shield": {
+            "textures": "textures/items/gui_shield"
+        },
+        "shadow_whisper": {
+            "textures": "textures/items/shadow_whisper"
+        },
+        "data_getter": {
+            "textures": "textures/items/data_getter"
+        },
+        "death_item": {
+            "textures": "textures/items/death_item"
+        }
+    }
+}

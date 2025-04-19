@@ -1,0 +1,32 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "lost_mod:data_getter",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": {
+                "value": 1
+            },
+            "minecraft:allow_off_hand": true,            
+            "minecraft:should_despawn": false,
+            "minecraft:use_modifiers": {
+                "use_duration": 100
+            },
+            "minecraft:food": {
+                "can_always_eat": true
+            },
+            "minecraft:display_name": {
+                "value": "§9信息检测§r"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "data_getter"
+                }
+            }
+        }
+    }
+}
