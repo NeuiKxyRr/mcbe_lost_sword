@@ -6,6 +6,9 @@
     "texture_data": {
         "air": {
             "textures": "textures/blocks/air"
+        },
+        "fake_block": {
+            "textures": "textures/entities/rain_lin"
         }
     }
 }

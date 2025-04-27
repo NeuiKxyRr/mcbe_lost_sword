@@ -1,0 +1,56 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.rain_lin.armor": {
+            "geometry": "Geometry.armor",
+            "materials": [
+                {
+                    "*": "Material.armor"
+                }
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.black",
+                        "Texture.black",
+                        "Texture.black",
+                        "Texture.blue",
+                        "Texture.blue",
+                        "Texture.green",
+                        "Texture.green",
+                        "Texture.purple",
+                        "Texture.purple",
+                        "Texture.red",
+                        "Texture.red",
+                        "Texture.white",
+                        "Texture.white",
+                        "Texture.yellow",
+                        "Texture.yellow",
+                        "Texture.yellow"
+                    ]
+                }
+            },
+            "textures": [
+                "Array.skins[(query.anim_time*14)]"
+            ],
+            "overlay_color": {
+                "r": "0",
+                "g": "0",
+                "b": "0",
+                "a": "0"
+            },
+            "uv_anim": {
+                "offset": [
+                    "Math.cos(query.life_time * 22.92) * 1.5",
+                    "query.life_time * 0.2"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 666,
+            "ignore_lighting": true
+        }
+    }
+}

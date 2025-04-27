@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "neuikxyrr:fake_block",
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:pick_collision": false,
+            "minecraft:entity_collision": false,
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.fake_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "fake_block",
+                    "render_method": "alpha_test"
+                }
+            }
+        }
+    }
+}
